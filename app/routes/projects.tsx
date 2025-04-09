@@ -1,8 +1,22 @@
-import { LoaderArgs, json } from "@remix-run/node";
+import { LoaderArgs, MetaFunction, json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import { gql } from "graphql-request";
 import { hygraph } from "~/utils/hygraph.server";
 import { Project } from "~/utils/interface";
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: "Projects" },
+    {
+      property: "og:title",
+      content: "Projects",
+    },
+    {
+      name: "description",
+      content: "This app is the best",
+    },
+  ];
+};
 
 interface iAppPorps {
   projects: Project;

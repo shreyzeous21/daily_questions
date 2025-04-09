@@ -1,10 +1,24 @@
-import { LoaderArgs, json } from "@remix-run/node";
+import { LoaderArgs, MetaFunction, json } from "@remix-run/node";
 import { Link, useLoaderData } from "@remix-run/react";
 import { gql } from "graphql-request";
 import { useState } from "react";
 
 import { hygraph } from "~/utils/hygraph.server";
 import { Post } from "~/utils/interface";
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: "Daily Updates" },
+    {
+      property: "og:title",
+      content: "Daily Updates",
+    },
+    {
+      name: "description",
+      content: "This app is the best",
+    },
+  ];
+};
 
 interface iAppProps {
   posts: Post;

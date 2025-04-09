@@ -1,4 +1,18 @@
+import { MetaFunction } from "@remix-run/node";
 import { useLocation } from "react-router-dom";
+export const meta: MetaFunction = () => {
+  return [
+    { title: "Shrey Sadhukhan | Portfolio" },
+    {
+      property: "og:title",
+      content: "Shrey Sadhukhan | Portfolio",
+    },
+    {
+      name: "description",
+      content: "This app is the best",
+    },
+  ];
+};
 
 const IndexPage = () => {
   const location = useLocation();
