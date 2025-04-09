@@ -63,7 +63,7 @@ const DailyUpdates = () => {
           placeholder="Search by title..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className="mt-4 p-2 border border-gray-300 rounded-md"
+          className="mt-4 p-2 border bg-white border-gray-300 text-black rounded-md"
         />
       </div>
 
