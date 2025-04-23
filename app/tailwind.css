@@ -2,10 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-img {
-    @apply opacity-0 transition-opacity duration-300;
-  }
-  
-  img.loaded {
-    @apply opacity-100;
-  }
