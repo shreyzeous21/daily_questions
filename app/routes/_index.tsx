@@ -170,7 +170,7 @@ const Projects = () => {
       </div>
 
       {/* Masonry Grid Container */}
-      <div className="columns-1 gap-4 sm:columns-2 lg:columns-3 [&>div:not(:first-child)]:mt-4">
+      <div className="columns-1 gap-4 columns-2 lg:columns-4 [&>div:not(:first-child)]:mt-4">
         {projects.projects.map((project) => (
           <div
             key={project.id}
