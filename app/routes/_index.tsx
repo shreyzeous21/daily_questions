@@ -136,7 +136,7 @@ interface iAppProps {
 export async function loader({}: LoaderArgs) {
   const query = gql`
     query MyQuery {
-      projects(orderBy: publishedAt_DESC) {
+      projects(orderBy: publishedAt_DESC,first: 1000) {
         id
         link
         overview
